@@ -1,0 +1,288 @@
+.first-flight {
+  --ff-navy: #173953;
+  --ff-ink: #25465c;
+  --ff-muted: #667f8d;
+  --ff-sky: #e8f3f7;
+  --ff-blue: #287b9e;
+  --ff-blue-deep: #1b6687;
+  --ff-gold: #d8ad59;
+  --ff-line: #d5e3e8;
+  --ff-paper: #fbfdfd;
+  width: min(100% - 40px, 1080px);
+  margin: 0 auto;
+  padding: 30px 0 76px;
+  color: var(--ff-ink);
+}
+
+.first-flight *, .first-flight *::before, .first-flight *::after { box-sizing: border-box; }
+.first-flight__masthead { display:flex; align-items:center; gap:13px; margin:0 0 20px; }
+.first-flight__brand-mark { display:grid; place-items:center; width:43px; height:43px; flex:none; color:#fff; background:var(--ff-navy); border-radius:14px; box-shadow:0 7px 16px #17395322; }
+.first-flight__kicker,.first-flight__eyebrow,.first-flight__scenario-meta,.first-flight__briefing-stamp { font-family:var(--app-font-mono,ui-monospace,monospace); font-size:10px; font-weight:700; letter-spacing:.12em; }
+.first-flight__kicker { margin:0 0 3px; color:#668091; }
+.first-flight__kicker span { color:var(--ff-gold); padding:0 4px; }
+.first-flight__page-title { margin:0; color:var(--ff-navy); font-family:var(--app-font-serif,Georgia,serif); font-size:28px; line-height:1.05; letter-spacing:-.04em; font-weight:500; }
+.first-flight__masthead-note { margin-left:auto; display:flex; align-items:center; gap:8px; color:#68808e; font-size:11px; font-weight:650; }
+.first-flight__masthead-note i { width:8px; height:8px; border-radius:50%; background:#75a981; box-shadow:0 0 0 4px #75a9811c; }
+.first-flight__safety { display:flex; align-items:flex-start; gap:12px; padding:13px 17px; margin:0 0 19px; border:1px solid #d5e5e9; border-left:3px solid var(--ff-gold); border-radius:13px; color:#37586b; background:#eef7f8; }
+.first-flight__safety svg { flex:0 0 auto; margin-top:1px; color:var(--ff-blue); }
+.first-flight__safety p { margin:0; font-size:12px; line-height:1.6; }
+.first-flight__safety strong { color:var(--ff-navy); }
+.first-flight__intro,.first-flight__game,.first-flight__result { overflow:hidden; border:1px solid var(--ff-line); border-radius:22px; background:var(--ff-paper); box-shadow:0 16px 42px #17395310; }
+.first-flight__intro { position:relative; display:grid; grid-template-columns:1.12fr .88fr; min-height:370px; align-items:stretch; background:#f5fbfc; }
+.first-flight__intro-scene { position:relative; min-height:320px; align-self:stretch; overflow:hidden; background:#b8e2ed; }
+.first-flight__illustration { display:block; width:100%; height:auto; }
+.first-flight__intro-scene .first-flight__illustration { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.first-flight__scene-caption,.first-flight__landscape-note { position:absolute; right:17px; bottom:13px; left:17px; display:flex; align-items:center; justify-content:space-between; gap:12px; color:#fff; font:700 9px var(--app-font-mono,monospace); letter-spacing:.11em; text-shadow:0 1px 5px #17395375; }
+.first-flight__intro-copy { display:flex; flex-direction:column; justify-content:center; padding:clamp(24px,5vw,53px); background:linear-gradient(140deg,#fbfdfd 0%,#f7fbfa 100%); }
+.first-flight__eyebrow { display:inline-flex; align-items:center; gap:7px; color:var(--ff-blue); }
+.first-flight__intro h2,.first-flight__result h2,.first-flight__scenario h2 { color:var(--ff-navy); font-family:var(--app-font-serif,Georgia,serif); font-weight:500; letter-spacing:-.04em; }
+.first-flight__intro h2 { max-width:440px; margin:16px 0 11px; font-size:clamp(34px,4.6vw,51px); line-height:1.04; }
+.first-flight__intro-copy > p { max-width:470px; margin:0 0 23px; color:var(--ff-muted); font-size:14px; line-height:1.75; }
+.first-flight__intro-bottom { display:flex; flex-wrap:wrap; align-items:center; gap:16px; }
+.first-flight__duration { display:flex; align-items:center; gap:9px; color:#7b909a; font-size:11px; }
+.first-flight__duration i { width:3px; height:3px; border-radius:50%; background:var(--ff-gold); }
+.first-flight__prior-note { grid-column:1/-1; margin:0; padding:12px 20px; color:#6b8190; background:#fff9ec; border-top:1px solid #eee2c8; font-size:12px; }
+.first-flight__button { display:inline-flex; min-height:46px; align-items:center; justify-content:center; gap:9px; padding:0 19px; border:1px solid transparent; border-radius:12px; font:inherit; font-size:13px; font-weight:700; cursor:pointer; transition:transform .16s ease,background-color .16s ease,border-color .16s ease; }
+.first-flight__button:hover { transform:translateY(-2px); }
+.first-flight__button:focus-visible,.first-flight__choice:focus-visible { outline:3px solid var(--ff-gold); outline-offset:3px; }
+.first-flight__button--primary { color:#fff; background:var(--ff-blue); box-shadow:0 6px 15px #205d7a24; }
+.first-flight__button--primary:hover { background:var(--ff-blue-deep); }
+
+.first-flight__game { padding:0 0 28px; }
+.first-flight__journey-top { padding:22px clamp(18px,4vw,36px) 15px; }
+.first-flight__progress-head { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.first-flight__progress-head p { margin:5px 0 0; color:#758994; font-size:12px; }
+.first-flight__progress-head p strong { color:var(--ff-navy); }
+.first-flight__run-score { display:flex; align-items:center; gap:7px; color:#607c8d; font-size:11px; }
+.first-flight__run-score strong { color:var(--ff-navy); font:500 23px var(--app-font-serif,Georgia,serif); }
+.first-flight__run-score i { width:3px; height:3px; border-radius:50%; background:var(--ff-gold); }
+.first-flight__progress-track { height:7px; margin:14px 0 17px; overflow:hidden; border-radius:99px; background:#e5eef0; }
+.first-flight__progress-track span { display:block; height:100%; border-radius:inherit; background:linear-gradient(90deg,#68a9b8,#d6ad5b); transition:width .35s ease; }
+.first-flight__stage-rail { display:grid; grid-template-columns:repeat(5,1fr); gap:7px; }
+.first-flight__stage { position:relative; display:grid; grid-template-columns:26px 1fr; align-items:center; column-gap:8px; min-height:38px; color:#8598a1; }
+.first-flight__stage::before { position:absolute; top:0; right:0; left:0; height:2px; content:""; background:#e3ecee; }
+.first-flight__stage-number { display:grid; place-items:center; width:24px; height:24px; border-radius:50%; color:#718895; background:#e9f0f1; font:700 9px var(--app-font-mono,monospace); }
+.first-flight__stage-label { align-self:end; padding-top:8px; white-space:nowrap; font-size:10px; font-weight:700; }
+.first-flight__stage small { grid-column:2; color:#8b7947; font-size:8px; line-height:1.2; }
+.first-flight__stage.is-active { color:#246f8f; }
+.first-flight__stage.is-active::before,.first-flight__stage.is-earned::before { background:#d4ad5c; }
+.first-flight__stage.is-active .first-flight__stage-number { color:#fff; background:#287b9e; box-shadow:0 0 0 4px #287b9e1d; }
+.first-flight__stage.is-earned .first-flight__stage-number { color:#fff; background:#658e72; }
+.first-flight__landscape { position:relative; overflow:hidden; margin:0 clamp(12px,2.2vw,22px); border-radius:16px; background:#a9dce8; }
+.first-flight__landscape--taxi .first-flight__illustration { filter:saturate(.94); }
+.first-flight__landscape--takeoff .first-flight__illustration { filter:saturate(1.06); }
+.first-flight__landscape--climb .first-flight__illustration { filter:saturate(1.08); }
+.first-flight__landscape--prepare-to-land .first-flight__illustration { filter:saturate(.92); }
+.first-flight__illustration--preflight .first-flight__hangar { opacity:1; }
+.first-flight__illustration--taxi .first-flight__hangar { opacity:.58; }
+.first-flight__illustration--taxi .first-flight__tower { opacity:.66; }
+.first-flight__illustration--takeoff .first-flight__hangar { opacity:.34; }
+.first-flight__illustration--takeoff .first-flight__tower { opacity:.42; }
+.first-flight__illustration--takeoff .first-flight__clouds { opacity:.76; }
+.first-flight__illustration--climb .first-flight__clouds.is-high { animation-duration:20s; }
+.first-flight__illustration--climb .first-flight__plane { filter:drop-shadow(0 3px 2px #365c7140); }
+.first-flight__illustration--prepare-to-land .first-flight__hangar,
+.first-flight__illustration--prepare-to-land .first-flight__tower { opacity:.9; }
+.first-flight__illustration.is-landing .first-flight__plane { filter:drop-shadow(0 3px 2px #365c7140); }
+.first-flight__landscape-note { bottom:9px; left:12px; right:12px; font-size:8px; }
+.first-flight__scenario { margin:19px clamp(12px,2.2vw,22px) 0; padding:clamp(18px,3.5vw,31px); border:1px solid #e0eaed; border-radius:16px; background:#fff; }
+.first-flight__scenario-meta { display:flex; align-items:center; gap:11px; color:var(--ff-blue); font-size:9px; flex-wrap:wrap; }
+.first-flight__scenario-meta > span:nth-child(2) { margin-left:auto; }
+.first-flight__scenario-meta > span:last-child { color:#8b9aa1; }
+.first-flight__stage-chip { padding:5px 8px; border-radius:99px; color:#735b25; background:#f8f0dc; font-size:9px; letter-spacing:.04em; }
+.first-flight__scenario h2 { margin:13px 0 7px; font-size:clamp(27px,3.5vw,38px); line-height:1.1; }
+.first-flight__setup { max-width:760px; margin:0; color:#657c89; font-size:13px; line-height:1.72; }
+.first-flight__prompt { margin:21px 0 11px; color:#234a63; font-size:14px; font-weight:750; }
+.first-flight__choices { display:grid; grid-template-columns:1fr 1fr; gap:9px; }
+.first-flight__choice { min-height:67px; display:flex; align-items:center; gap:12px; padding:11px 13px; text-align:left; color:#385568; background:#fbfdfd; border:1px solid #dce7eb; border-radius:11px; font:inherit; font-size:12px; line-height:1.5; cursor:pointer; transition:border-color .16s ease,background-color .16s ease,transform .16s ease; }
+.first-flight__choice:not(:disabled):hover { transform:translateY(-1px); border-color:#9dc5d3; background:#f3f9fa; }
+.first-flight__choice:disabled { cursor:default; }
+.first-flight__choice-letter { display:grid; width:28px; height:28px; flex:0 0 28px; place-items:center; border-radius:8px; color:#527184; background:#eaf2f4; font:700 11px var(--app-font-mono,monospace); }
+.first-flight__choice-text { flex:1; }
+.first-flight__choice.is-correct { border-color:#8bb7a1; background:#f0f7f2; color:#2b5945; }
+.first-flight__choice.is-correct .first-flight__choice-letter { color:#fff; background:#56856b; }
+.first-flight__choice.is-incorrect { border-color:#d9aa91; background:#fcf4ef; color:#754b37; }
+.first-flight__choice.is-incorrect .first-flight__choice-letter { color:#fff; background:#a5684c; }
+.first-flight__choice svg { flex:0 0 auto; color:#4b8061; }
+.first-flight__feedback { display:flex; gap:11px; margin-top:15px; padding:14px 15px; border:1px solid #d7e6eb; border-radius:11px; color:#38576a; background:#f2f8f9; }
+.first-flight__feedback.is-good { background:#f2f8f3; border-color:#d1e3d6; }
+.first-flight__feedback.is-review { background:#fbf6ee; border-color:#eadfc8; }
+.first-flight__feedback-icon { display:grid; width:27px; height:27px; flex:0 0 27px; place-items:center; border-radius:50%; background:#e1eef1; color:var(--ff-blue); }
+.first-flight__feedback.is-good .first-flight__feedback-icon { background:#e0eee4; color:#4b8061; }
+.first-flight__feedback.is-review .first-flight__feedback-icon { background:#f1e8d5; color:#92743e; }
+.first-flight__feedback strong { color:var(--ff-navy); font-size:13px; }
+.first-flight__feedback p { margin:4px 0 0; font-size:12px; line-height:1.6; }
+.first-flight__feedback .first-flight__best-answer { padding-top:8px; border-top:1px solid #e7dcc6; }
+.first-flight__scenario-footer { display:flex; align-items:center; justify-content:space-between; gap:15px; margin-top:18px; }
+.first-flight__scenario-footer > span { color:#83949c; font-size:11px; }
+
+.first-flight__result { position:relative; max-width:760px; margin:0 auto; padding:0 clamp(23px,6vw,48px) 38px; }
+.first-flight__result-art { height:188px; margin:0 calc(clamp(23px,6vw,48px) * -1) 26px; overflow:hidden; background:#a9dce8; }
+.first-flight__result-art .first-flight__illustration { height:100%; object-fit:cover; }
+.first-flight__result-heading { text-align:center; }
+.first-flight__badge { display:inline-flex; align-items:center; gap:7px; padding:8px 12px; border:1px solid #e6d4a5; border-radius:99px; color:#826b35; background:#fbf6e9; font:700 10px var(--app-font-mono,monospace); letter-spacing:.1em; }
+.first-flight__result-heading .first-flight__eyebrow { display:flex; justify-content:center; margin-top:20px; }
+.first-flight__result h2 { margin:9px 0 8px; font-size:clamp(30px,5vw,43px); }
+.first-flight__result-intro { color:#718491; font-size:13px; line-height:1.6; }
+.first-flight__score-panel { display:flex; align-items:center; justify-content:center; gap:28px; margin-top:22px; padding:21px; border-radius:15px; background:#eff6f8; }
+.first-flight__score-ring { display:flex; width:110px; height:110px; flex-direction:column; align-items:center; justify-content:center; border:5px solid #d8bd7b; border-radius:50%; color:var(--ff-navy); background:#fff; }
+.first-flight__score-ring strong { font:500 35px/.95 var(--app-font-serif,Georgia,serif); }
+.first-flight__score-ring small { font-size:18px; }
+.first-flight__score-ring span { margin-top:5px; color:#80909a; font-size:10px; }
+.first-flight__score-copy > span { font-size:9px; }
+.first-flight__points { margin:7px 0 4px; color:var(--ff-navy); font:500 33px var(--app-font-serif,Georgia,serif); }
+.first-flight__points span { color:#758b98; font:12px var(--app-font-mono,monospace); }
+.first-flight__score-copy > p:last-child { margin:0; color:#6a808e; font-size:13px; }
+.first-flight__earned-badges { display:flex; justify-content:center; flex-wrap:wrap; gap:7px; margin:15px 0; }
+.first-flight__earned-badge { display:inline-flex; align-items:center; gap:5px; padding:6px 9px; border:1px solid #d9e7dc; border-radius:99px; color:#52755b; background:#f5faf5; font-size:10px; }
+.first-flight__saved { display:flex; align-items:flex-start; gap:12px; margin:16px 0; padding:14px 16px; border:1px solid #dce8e5; border-radius:12px; background:#f8fbf9; }
+.first-flight__saved-icon { display:grid; width:27px; height:27px; flex:0 0 27px; place-items:center; border-radius:50%; color:#fff; background:#638b70; }
+.first-flight__saved strong { color:#335943; font-size:13px; }
+.first-flight__saved p { margin:4px 0 0; color:#6e8378; font-size:12px; line-height:1.5; }
+.first-flight__save-warning { padding:12px 14px; border-radius:9px; color:#714c37; background:#fbf1e9; font-size:12px; line-height:1.55; }
+.first-flight__result > .first-flight__button { display:flex; margin:20px auto 0; }
+
+.first-flight__plane { transition:transform .75s cubic-bezier(.22,.7,.28,1); transform-box:fill-box; transform-origin:center; }
+.first-flight__clouds { animation:ff-cloud-drift 16s ease-in-out infinite alternate; }
+.first-flight__bird { animation:ff-bird-drift 8s ease-in-out infinite alternate; }
+@keyframes ff-cloud-drift { to { transform:translateX(14px); } }
+@keyframes ff-bird-drift { to { transform:translate(9px,-5px); } }
+
+/* Match the shared Young Pilot Journey dark aviation palette. */
+.first-flight {
+  --ff-navy:#061a30;
+  --ff-ink:#eef4fb;
+  --ff-muted:#c4d5e8;
+  --ff-sky:#173c59;
+  --ff-blue:#8bbce8;
+  --ff-blue-deep:#a9d0f3;
+  --ff-gold:#e9c66d;
+  --ff-line:#ffffff28;
+  --ff-paper:#082541;
+  color:#eef4fb;
+}
+.first-flight__brand-mark { color:#061a30; background:#e9c66d; }
+.first-flight__kicker,.first-flight__masthead-note,.first-flight__duration { color:#c4d5e8; }
+.first-flight__page-title,.first-flight__intro h2,.first-flight__result h2,.first-flight__scenario h2 { color:#fff; }
+.first-flight__safety { border-color:#ffffff28; color:#d9e7f4; background:#102f46; }
+.first-flight__safety strong { color:#e9c66d; }
+.first-flight__intro { background:#082541; }
+.first-flight__intro-copy { background:linear-gradient(140deg,#082541,#0b3154); }
+.first-flight__intro-copy>p,.first-flight__result-intro,.first-flight__progress-head p,.first-flight__scenario-footer>span { color:#c4d5e8; }
+.first-flight__prior-note { color:#d5e2ee; background:#102f46; border-color:#ffffff22; }
+.first-flight__features li,.first-flight__lessons,.first-flight__saved { background:#0b3154; border-color:#ffffff25; }
+.first-flight__features strong,.first-flight__lessons strong,.first-flight__lessons h3 { color:#fff; }
+.first-flight__features small,.first-flight__lessons-note,.first-flight__lessons small,.first-flight__saved p { color:#c4d5e8; }
+.first-flight__button--primary,.first-flight__intro .first-flight__button--primary { background:#e9c66d; color:#061a30; }
+.first-flight__button--primary:hover { background:#f1d889; }
+.first-flight__button--secondary { background:#0b3154; border-color:#ffffff30; color:#eef4fb; }
+.first-flight__intro-scene,.first-flight__result-art { filter:saturate(.8) brightness(.88); }
+.first-flight__progress-head p strong,.first-flight__run-score strong,.first-flight__points { color:#e9c66d; }
+.first-flight__run-score,.first-flight__stage { color:#c4d5e8; }
+.first-flight__progress-track,.first-flight__stage::before { background:#ffffff24; }
+.first-flight__progress-track span { background:linear-gradient(90deg,#8bbce8,#e9c66d); }
+.first-flight__stage-number { color:#dce9f5; background:#173c59; }
+.first-flight__stage.is-active { color:#8bbce8; }
+.first-flight__stage.is-complete .first-flight__stage-number { color:#061a30; background:#e9c66d; }
+.first-flight__choice { background:#0b3154; border-color:#ffffff28; color:#eef4fb; }
+.first-flight__choice:hover:not(:disabled) { background:#17446a; }
+.first-flight__feedback { color:#dbe8f2; background:#102f46; border-color:#ffffff22; }
+.first-flight__feedback.is-good { background:#123f43; border-color:#4b9b85; }
+.first-flight__feedback.is-review { background:#3b3425; border-color:#8f7540; }
+.first-flight__feedback strong { color:#fff; }
+.first-flight__feedback .first-flight__best-answer { border-color:#ffffff26; }
+.first-flight__result .first-flight__score-panel { background:#0b3154; }
+.first-flight__score-ring { background:#061a30; color:#fff; }
+.first-flight__score-ring span,.first-flight__points span,.first-flight__score-copy>p:last-child { color:#c4d5e8; }
+.first-flight__badge { color:#e9c66d; background:#3b3425; border-color:#8f7540; }
+.first-flight__earned-badge { color:#c9eedb; background:#123f43; border-color:#4b8069; }
+.first-flight__saved { color:#d7e9e0; }
+.first-flight__saved strong { color:#d0f1df; }
+.first-flight__save-warning { color:#ffe8bd; background:#3b3425; }
+
+@media (max-width:760px) {
+  .first-flight { width:min(100% - 30px,650px); padding:22px 0 52px; }
+  .first-flight__intro { grid-template-columns:1fr; }
+  .first-flight__intro-scene { min-height:250px; }
+  .first-flight__intro-copy { padding:27px; }
+  .first-flight__intro h2 { max-width:560px; }
+  .first-flight__stage-rail { gap:3px; }
+  .first-flight__stage { grid-template-columns:23px 1fr; column-gap:5px; }
+  .first-flight__stage-label { font-size:9px; }
+  .first-flight__stage small { font-size:7px; }
+}
+@media (max-width:560px) {
+  .first-flight { width:min(100% - 24px,500px); padding-top:17px; }
+  .first-flight__masthead { margin-bottom:15px; }
+  .first-flight__page-title { font-size:24px; }
+  .first-flight__masthead-note { font-size:0; }
+  .first-flight__masthead-note i { width:9px; height:9px; }
+  .first-flight__safety { padding:11px 12px; gap:9px; }
+  .first-flight__safety p { font-size:11px; }
+  .first-flight__intro-scene { min-height:205px; }
+  .first-flight__intro-copy { padding:23px 19px; }
+  .first-flight__intro h2 { font-size:35px; }
+  .first-flight__intro-copy > p { font-size:13px; }
+  .first-flight__intro-bottom { align-items:flex-start; flex-direction:column; gap:11px; }
+  .first-flight__journey-top { padding:16px 15px 12px; }
+  .first-flight__progress-head { align-items:flex-start; flex-direction:column; gap:9px; }
+  .first-flight__stage { display:flex; flex-direction:column; align-items:center; min-height:61px; text-align:center; }
+  .first-flight__stage::before { top:11px; right:-50%; left:50%; height:2px; }
+  .first-flight__stage:last-child::before { display:none; }
+  .first-flight__stage-number { z-index:1; }
+  .first-flight__stage-label { align-self:center; padding-top:6px; font-size:8px; white-space:normal; line-height:1.1; }
+  .first-flight__stage small { display:none; }
+  .first-flight__landscape { margin:0 9px; }
+  .first-flight__scenario { margin:13px 9px 0; padding:16px; }
+  .first-flight__scenario-meta { font-size:8px; }
+  .first-flight__scenario-meta > span:nth-child(2) { order:3; width:100%; margin:0; }
+  .first-flight__scenario h2 { font-size:29px; }
+  .first-flight__choices { grid-template-columns:1fr; }
+  .first-flight__choice { min-height:60px; }
+  .first-flight__scenario-footer { align-items:stretch; flex-direction:column; }
+  .first-flight__scenario-footer .first-flight__button { width:100%; }
+  .first-flight__result { padding-bottom:26px; }
+  .first-flight__result-art { height:150px; }
+  .first-flight__score-panel { justify-content:flex-start; gap:17px; padding:16px; }
+  .first-flight__score-ring { width:94px; height:94px; flex:0 0 94px; }
+  .first-flight__score-ring strong { font-size:30px; }
+  .first-flight__points { font-size:27px; }
+  .first-flight__points span { display:block; margin-top:1px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .first-flight *, .first-flight *::before, .first-flight *::after { scroll-behavior:auto!important; transition-duration:.01ms!important; animation-duration:.01ms!important; animation-iteration-count:1!important; }
+}
+
+/* Redesign additions: welcome features, lessons reviewed, result actions */
+.first-flight__intro { min-height:440px; }
+.first-flight__intro-copy > p { font-size:16px; color:var(--ff-ink); }
+.first-flight__features { display:grid; gap:10px; margin:0 0 24px; padding:0; list-style:none; }
+.first-flight__features li { display:flex; align-items:flex-start; gap:12px; padding:11px 13px; border:1px solid var(--ff-line); border-radius:14px; background:#fff; }
+.first-flight__features li > span { display:grid; place-items:center; flex:none; width:34px; height:34px; border-radius:10px; background:var(--ff-sky); color:var(--ff-blue-deep); }
+.first-flight__features li:nth-child(2) > span { background:#f8efdb; color:#8b6b27; }
+.first-flight__features strong { display:block; color:var(--ff-navy); font-size:14px; }
+.first-flight__features small { color:var(--ff-muted); font-size:12px; line-height:1.5; }
+.first-flight__intro .first-flight__button--primary { padding:15px 26px; font-size:16px; background:var(--ff-blue); }
+.first-flight__lessons { margin:18px 0; padding:18px; border:1px solid var(--ff-line); border-radius:16px; background:#fff; }
+.first-flight__lessons h3 { display:flex; align-items:center; gap:7px; margin:0 0 12px; color:var(--ff-navy); font-size:15px; }
+.first-flight__lessons ul { display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:9px; margin:0; padding:0; list-style:none; }
+.first-flight__lessons li { display:flex; flex-direction:column; gap:3px; padding:11px 12px; border-left:3px solid var(--ff-blue); border-radius:10px; background:var(--ff-sky); }
+.first-flight__lessons li.is-review { border-left-color:var(--ff-gold); background:#fbf5e7; }
+.first-flight__lesson-stage { color:var(--ff-blue-deep); font:700 10px var(--app-font-mono,monospace); letter-spacing:.08em; text-transform:uppercase; }
+.first-flight__lessons strong { color:var(--ff-navy); font-size:13px; }
+.first-flight__lessons small { color:var(--ff-muted); font-size:11px; text-transform:capitalize; }
+.first-flight__lessons-note { margin:12px 0 0; color:var(--ff-muted); font-size:12px; line-height:1.6; }
+.first-flight__lessons-note a { color:var(--ff-blue-deep); font-weight:700; }
+.first-flight__result-actions { display:flex; flex-wrap:wrap; gap:10px; }
+.first-flight__button--secondary { display:inline-flex; align-items:center; gap:8px; border:1px solid var(--ff-line); background:#fff; color:var(--ff-navy); text-decoration:none; }
+.first-flight__button--secondary:hover { border-color:var(--ff-blue); }
+@media (max-width: 760px) { .first-flight__intro { min-height:0; } }
+
+/* Keep feature and completion panels legible after the responsive rules. */
+.first-flight__intro,.first-flight__game,.first-flight__result { background:#082541; border-color:#ffffff28; }
+.first-flight__intro-copy { background:linear-gradient(140deg,#082541,#0b3154); }
+.first-flight__features li,.first-flight__lessons,.first-flight__saved { background:#0b3154; border-color:#ffffff25; }
+.first-flight__features strong,.first-flight__lessons strong,.first-flight__lessons h3 { color:#fff; }
+.first-flight__features small,.first-flight__lessons-note,.first-flight__lessons small,.first-flight__saved p { color:#c4d5e8; }
+.first-flight__intro .first-flight__button--primary { color:#061a30; background:#e9c66d; }
+.first-flight__button--secondary { background:#0b3154; border-color:#ffffff30; color:#eef4fb; }

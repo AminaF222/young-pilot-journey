@@ -1,0 +1,39 @@
+.explore-page .page-intro { max-width:780px; }
+.explore-notice { display:flex; gap:14px; margin:0 0 22px; padding:18px 20px; border:1px solid #e3cf9e; border-radius:16px; background:linear-gradient(110deg,#fffaf0,#fbfdfd 75%); color:#5f7481; }
+.explore-notice > svg { flex:none; color:#896a2d; margin-top:2px; }
+.explore-notice strong { color:#173953; font-size:14px; }
+.explore-notice p { margin:6px 0 0; font-size:13px; line-height:1.7; }
+.explore-inline-link { color:#1b6687; font-weight:700; }
+.explore-filter { display:flex; flex-wrap:wrap; gap:8px; }
+.explore-chip { display:inline-flex; align-items:center; gap:8px; min-height:40px; padding:0 14px; border:1px solid #d5e3e8; border-radius:999px; background:#fbfdfd; color:#25465c; font:inherit; font-size:13px; font-weight:700; cursor:pointer; transition:transform .15s ease; }
+.explore-chip span { padding:1px 7px; border-radius:999px; background:#e8f3f7; color:#1b6687; font-size:11px; }
+.explore-chip:hover { transform:translateY(-1px); border-color:#287b9e; }
+.explore-chip.is-active { background:#173953; border-color:#173953; color:#fff; }
+.explore-chip.is-active span { background:#d8ad59; color:#173953; }
+.explore-chip:focus-visible, .explore-cta:focus-visible { outline:3px solid #d8ad59; outline-offset:3px; }
+.explore-count { margin:12px 0 6px; color:#667f8d; font:600 11px var(--app-font-mono,monospace); letter-spacing:.06em; text-transform:uppercase; }
+.explore-group { margin-top:26px; }
+.explore-group-head { display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 14px; padding-bottom:10px; margin-bottom:14px; border-bottom:2px solid #173953; }
+.explore-group-head h2 { margin:0; font-size:clamp(22px,2.6vw,28px); color:#173953; }
+.explore-group-head span { color:#667f8d; font-size:13px; }
+.explore-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:14px; }
+.explore-card { display:flex; flex-direction:column; gap:10px; padding:22px; border:1px solid #d5e3e8; border-radius:18px; background:#fbfdfd; box-shadow:0 8px 20px #1b3e5409; }
+.explore-category { align-self:flex-start; padding:4px 10px; border-radius:999px; font:700 10px var(--app-font-mono,monospace); letter-spacing:.07em; text-transform:uppercase; background:#e8f3f7; color:#1b6687; }
+.explore-category.cat-college-degree { background:#e6ecf5; color:#173953; }
+.explore-category.cat-flight-training { background:#f8efdb; color:#7c5e22; }
+.explore-category.cat-youth-enrichment { background:#e6f2ec; color:#2e6a4f; }
+.explore-card h3 { margin:0; color:#173953; font-size:18px; line-height:1.3; }
+.explore-location { display:flex; align-items:flex-start; gap:6px; margin:0; color:#287b9e; font-size:12px; font-weight:700; }
+.explore-location svg { flex:none; margin-top:2px; }
+.explore-description { margin:0; color:#4d6a7a; font-size:13px; line-height:1.7; }
+.explore-eligibility { padding:11px 13px; border-left:3px solid #d8ad59; border-radius:8px; background:#f6f9fa; }
+.explore-eligibility span { display:flex; align-items:center; gap:6px; color:#173953; font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:.05em; }
+.explore-eligibility p { margin:5px 0 0; color:#5f7481; font-size:12px; line-height:1.6; }
+.explore-cta { margin-top:auto; align-self:flex-start; text-align:left; }
+.explore-empty { display:flex; flex-direction:column; align-items:center; gap:8px; margin-top:26px; padding:40px 20px; border:1px dashed #a7c5d0; border-radius:18px; text-align:center; color:#5f7481; }
+.explore-empty-icon { display:grid; place-items:center; width:56px; height:56px; border-radius:50%; background:#e8f3f7; color:#1b6687; }
+.explore-empty h2 { margin:6px 0 0; color:#173953; font-size:22px; }
+.explore-empty p { margin:0 0 8px; font-size:13px; }
+.sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+@media (max-width:767px) { .explore-grid { grid-template-columns:1fr; } .explore-card { padding:18px; } }
+@media (prefers-reduced-motion:reduce) { .explore-chip { transition:none; } .explore-chip:hover { transform:none; } }

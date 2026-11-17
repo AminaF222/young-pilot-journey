@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Young Pilot Journey"
+description = "Young Pilot Journey helps students explore aviation through beginner-friendly lessons, interactive flashcards and quizzes, a pilot pathway, and locally saved progress."
+version = "1.0.0"
+id = "artifacts/young-pilot-study"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19858
+
+[services.development]
+run = "pnpm --filter @workspace/young-pilot-study run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/young-pilot-study", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/young-pilot-study/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19858"
+BASE_PATH = "/"
